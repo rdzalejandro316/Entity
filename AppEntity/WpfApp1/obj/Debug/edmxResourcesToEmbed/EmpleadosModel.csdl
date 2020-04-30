@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SDXCatering_Emp010Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CtMae_Empleados">
+    <Key>
+      <PropertyRef Name="idrow" />
+    </Key>
+    <Property Name="idrow" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpleadoCodigo" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EmpleadoNombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmpleadoApellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cedula" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EmpresaCodigo" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PuntoVentaCodigo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CargoId" Type="Int32" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Celular" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IndDesayuno" Type="Boolean" />
+    <Property Name="IndAlmuerzo" Type="Boolean" />
+    <Property Name="IndComida" Type="Boolean" />
+    <Property Name="IndCena" Type="Boolean" />
+    <Property Name="IndLunch" Type="Boolean" />
+    <Property Name="IndLunchEspecial" Type="Boolean" />
+    <Property Name="IndManualCliente" Type="Boolean" />
+    <Property Name="IndRefrigerios" Type="Boolean" />
+    <Property Name="CantidadPermitidas" Type="Int32" />
+    <Property Name="AutorizacionPuntoVenta" Type="Boolean" />
+    <Property Name="MultiReservas" Type="Boolean" />
+    <Property Name="IndVivienda" Type="Boolean" />
+    <Property Name="IndViviendaBase" Type="Boolean" />
+    <Property Name="ViviendaCodigo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="HabitacionCodigo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CamaCodigo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Nota" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+    <Property Name="Genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FechaAdEd" Type="DateTime" Precision="3" />
+    <Property Name="antcargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idcliente" Type="Int32" />
+    <Property Name="antpventa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IndVisitante" Type="Boolean" />
+    <Property Name="Tarjeta" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SDXCatering_Emp010Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CtMae_Empleados" EntityType="Self.CtMae_Empleados" />
+  </EntityContainer>
+</Schema>

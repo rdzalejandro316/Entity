@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SDXCatering_Emp010Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CtMae_Empleados">
+    <Key>
+      <PropertyRef Name="idrow" />
+    </Key>
+    <Property Name="idrow" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpleadoCodigo" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="EmpleadoNombres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpleadoApellidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cedula" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="EmpresaCodigo" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="PuntoVentaCodigo" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="CargoId" Type="int" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Celular" Type="varchar" MaxLength="30" />
+    <Property Name="IndDesayuno" Type="bit" />
+    <Property Name="IndAlmuerzo" Type="bit" />
+    <Property Name="IndComida" Type="bit" />
+    <Property Name="IndCena" Type="bit" />
+    <Property Name="IndLunch" Type="bit" />
+    <Property Name="IndLunchEspecial" Type="bit" />
+    <Property Name="IndManualCliente" Type="bit" />
+    <Property Name="IndRefrigerios" Type="bit" />
+    <Property Name="CantidadPermitidas" Type="int" />
+    <Property Name="AutorizacionPuntoVenta" Type="bit" />
+    <Property Name="MultiReservas" Type="bit" />
+    <Property Name="IndVivienda" Type="bit" />
+    <Property Name="IndViviendaBase" Type="bit" />
+    <Property Name="ViviendaCodigo" Type="char" MaxLength="10" />
+    <Property Name="HabitacionCodigo" Type="char" MaxLength="3" />
+    <Property Name="CamaCodigo" Type="char" MaxLength="2" />
+    <Property Name="Nota" Type="varchar" MaxLength="200" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="FechaIngreso" Type="date" />
+    <Property Name="Genero" Type="char" MaxLength="1" />
+    <Property Name="Foto" Type="image" />
+    <Property Name="FechaAdEd" Type="datetime" />
+    <Property Name="antcargo" Type="varchar" MaxLength="50" />
+    <Property Name="idcliente" Type="int" />
+    <Property Name="antpventa" Type="nchar" MaxLength="10" />
+    <Property Name="IndVisitante" Type="bit" />
+    <Property Name="Tarjeta" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="SDXCatering_Emp010ModelStoreContainer">
+    <EntitySet Name="CtMae_Empleados" EntityType="Self.CtMae_Empleados" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

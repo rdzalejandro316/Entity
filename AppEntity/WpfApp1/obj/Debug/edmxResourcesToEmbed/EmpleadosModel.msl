@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SDXCatering_Emp010ModelStoreContainer" CdmEntityContainer="SDXCatering_Emp010Entities">
+    <EntitySetMapping Name="CtMae_Empleados">
+      <EntityTypeMapping TypeName="SDXCatering_Emp010Model.CtMae_Empleados">
+        <MappingFragment StoreEntitySet="CtMae_Empleados">
+          <ScalarProperty Name="idrow" ColumnName="idrow" />
+          <ScalarProperty Name="EmpleadoCodigo" ColumnName="EmpleadoCodigo" />
+          <ScalarProperty Name="EmpleadoNombres" ColumnName="EmpleadoNombres" />
+          <ScalarProperty Name="EmpleadoApellidos" ColumnName="EmpleadoApellidos" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="EmpresaCodigo" ColumnName="EmpresaCodigo" />
+          <ScalarProperty Name="PuntoVentaCodigo" ColumnName="PuntoVentaCodigo" />
+          <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="IndDesayuno" ColumnName="IndDesayuno" />
+          <ScalarProperty Name="IndAlmuerzo" ColumnName="IndAlmuerzo" />
+          <ScalarProperty Name="IndComida" ColumnName="IndComida" />
+          <ScalarProperty Name="IndCena" ColumnName="IndCena" />
+          <ScalarProperty Name="IndLunch" ColumnName="IndLunch" />
+          <ScalarProperty Name="IndLunchEspecial" ColumnName="IndLunchEspecial" />
+          <ScalarProperty Name="IndManualCliente" ColumnName="IndManualCliente" />
+          <ScalarProperty Name="IndRefrigerios" ColumnName="IndRefrigerios" />
+          <ScalarProperty Name="CantidadPermitidas" ColumnName="CantidadPermitidas" />
+          <ScalarProperty Name="AutorizacionPuntoVenta" ColumnName="AutorizacionPuntoVenta" />
+          <ScalarProperty Name="MultiReservas" ColumnName="MultiReservas" />
+          <ScalarProperty Name="IndVivienda" ColumnName="IndVivienda" />
+          <ScalarProperty Name="IndViviendaBase" ColumnName="IndViviendaBase" />
+          <ScalarProperty Name="ViviendaCodigo" ColumnName="ViviendaCodigo" />
+          <ScalarProperty Name="HabitacionCodigo" ColumnName="HabitacionCodigo" />
+          <ScalarProperty Name="CamaCodigo" ColumnName="CamaCodigo" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="FechaAdEd" ColumnName="FechaAdEd" />
+          <ScalarProperty Name="antcargo" ColumnName="antcargo" />
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="antpventa" ColumnName="antpventa" />
+          <ScalarProperty Name="IndVisitante" ColumnName="IndVisitante" />
+          <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

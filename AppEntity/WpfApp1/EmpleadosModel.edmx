@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SDXCatering_Emp010Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CtMae_Empleados">
+          <Key>
+            <PropertyRef Name="idrow" />
+          </Key>
+          <Property Name="idrow" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpleadoCodigo" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="EmpleadoNombres" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EmpleadoApellidos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cedula" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="EmpresaCodigo" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="PuntoVentaCodigo" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="CargoId" Type="int" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Celular" Type="varchar" MaxLength="30" />
+          <Property Name="IndDesayuno" Type="bit" />
+          <Property Name="IndAlmuerzo" Type="bit" />
+          <Property Name="IndComida" Type="bit" />
+          <Property Name="IndCena" Type="bit" />
+          <Property Name="IndLunch" Type="bit" />
+          <Property Name="IndLunchEspecial" Type="bit" />
+          <Property Name="IndManualCliente" Type="bit" />
+          <Property Name="IndRefrigerios" Type="bit" />
+          <Property Name="CantidadPermitidas" Type="int" />
+          <Property Name="AutorizacionPuntoVenta" Type="bit" />
+          <Property Name="MultiReservas" Type="bit" />
+          <Property Name="IndVivienda" Type="bit" />
+          <Property Name="IndViviendaBase" Type="bit" />
+          <Property Name="ViviendaCodigo" Type="char" MaxLength="10" />
+          <Property Name="HabitacionCodigo" Type="char" MaxLength="3" />
+          <Property Name="CamaCodigo" Type="char" MaxLength="2" />
+          <Property Name="Nota" Type="varchar" MaxLength="200" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="FechaIngreso" Type="date" />
+          <Property Name="Genero" Type="char" MaxLength="1" />
+          <Property Name="Foto" Type="image" />
+          <Property Name="FechaAdEd" Type="datetime" />
+          <Property Name="antcargo" Type="varchar" MaxLength="50" />
+          <Property Name="idcliente" Type="int" />
+          <Property Name="antpventa" Type="nchar" MaxLength="10" />
+          <Property Name="IndVisitante" Type="bit" />
+          <Property Name="Tarjeta" Type="char" MaxLength="15" />
+        </EntityType>
+        <EntityContainer Name="SDXCatering_Emp010ModelStoreContainer">
+          <EntitySet Name="CtMae_Empleados" EntityType="Self.CtMae_Empleados" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SDXCatering_Emp010Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CtMae_Empleados">
+          <Key>
+            <PropertyRef Name="idrow" />
+          </Key>
+          <Property Name="idrow" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpleadoCodigo" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="EmpleadoNombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmpleadoApellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cedula" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="EmpresaCodigo" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PuntoVentaCodigo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CargoId" Type="Int32" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IndDesayuno" Type="Boolean" />
+          <Property Name="IndAlmuerzo" Type="Boolean" />
+          <Property Name="IndComida" Type="Boolean" />
+          <Property Name="IndCena" Type="Boolean" />
+          <Property Name="IndLunch" Type="Boolean" />
+          <Property Name="IndLunchEspecial" Type="Boolean" />
+          <Property Name="IndManualCliente" Type="Boolean" />
+          <Property Name="IndRefrigerios" Type="Boolean" />
+          <Property Name="CantidadPermitidas" Type="Int32" />
+          <Property Name="AutorizacionPuntoVenta" Type="Boolean" />
+          <Property Name="MultiReservas" Type="Boolean" />
+          <Property Name="IndVivienda" Type="Boolean" />
+          <Property Name="IndViviendaBase" Type="Boolean" />
+          <Property Name="ViviendaCodigo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="HabitacionCodigo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CamaCodigo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Nota" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
+          <Property Name="Genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FechaAdEd" Type="DateTime" Precision="3" />
+          <Property Name="antcargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="idcliente" Type="Int32" />
+          <Property Name="antpventa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="IndVisitante" Type="Boolean" />
+          <Property Name="Tarjeta" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SDXCatering_Emp010Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CtMae_Empleados" EntityType="Self.CtMae_Empleados" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SDXCatering_Emp010ModelStoreContainer" CdmEntityContainer="SDXCatering_Emp010Entities">
+          <EntitySetMapping Name="CtMae_Empleados">
+            <EntityTypeMapping TypeName="SDXCatering_Emp010Model.CtMae_Empleados">
+              <MappingFragment StoreEntitySet="CtMae_Empleados">
+                <ScalarProperty Name="idrow" ColumnName="idrow" />
+                <ScalarProperty Name="EmpleadoCodigo" ColumnName="EmpleadoCodigo" />
+                <ScalarProperty Name="EmpleadoNombres" ColumnName="EmpleadoNombres" />
+                <ScalarProperty Name="EmpleadoApellidos" ColumnName="EmpleadoApellidos" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="EmpresaCodigo" ColumnName="EmpresaCodigo" />
+                <ScalarProperty Name="PuntoVentaCodigo" ColumnName="PuntoVentaCodigo" />
+                <ScalarProperty Name="CargoId" ColumnName="CargoId" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="IndDesayuno" ColumnName="IndDesayuno" />
+                <ScalarProperty Name="IndAlmuerzo" ColumnName="IndAlmuerzo" />
+                <ScalarProperty Name="IndComida" ColumnName="IndComida" />
+                <ScalarProperty Name="IndCena" ColumnName="IndCena" />
+                <ScalarProperty Name="IndLunch" ColumnName="IndLunch" />
+                <ScalarProperty Name="IndLunchEspecial" ColumnName="IndLunchEspecial" />
+                <ScalarProperty Name="IndManualCliente" ColumnName="IndManualCliente" />
+                <ScalarProperty Name="IndRefrigerios" ColumnName="IndRefrigerios" />
+                <ScalarProperty Name="CantidadPermitidas" ColumnName="CantidadPermitidas" />
+                <ScalarProperty Name="AutorizacionPuntoVenta" ColumnName="AutorizacionPuntoVenta" />
+                <ScalarProperty Name="MultiReservas" ColumnName="MultiReservas" />
+                <ScalarProperty Name="IndVivienda" ColumnName="IndVivienda" />
+                <ScalarProperty Name="IndViviendaBase" ColumnName="IndViviendaBase" />
+                <ScalarProperty Name="ViviendaCodigo" ColumnName="ViviendaCodigo" />
+                <ScalarProperty Name="HabitacionCodigo" ColumnName="HabitacionCodigo" />
+                <ScalarProperty Name="CamaCodigo" ColumnName="CamaCodigo" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="FechaAdEd" ColumnName="FechaAdEd" />
+                <ScalarProperty Name="antcargo" ColumnName="antcargo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="antpventa" ColumnName="antpventa" />
+                <ScalarProperty Name="IndVisitante" ColumnName="IndVisitante" />
+                <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
