@@ -105,7 +105,14 @@ namespace WpfApp1
 
         private void BtnSelect_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show("error al realizar el select:"+w);
+            }
         }
     }
 }
