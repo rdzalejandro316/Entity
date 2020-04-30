@@ -35,8 +35,8 @@ namespace WpfApp1
                 using (var a = new SDXCatering_Emp010Entities())
                 {
                     var query = (from st in a.CtMae_Empleados
-                                //where st.EmpleadoCodigo == "1033796537"
-                                select st).Take(5);
+                                     //where st.EmpleadoCodigo == "1033796537"
+                                 select st).Take(5);
 
                     //var o = a.CtMae_Empleados.SqlQuery("select * From CtMae_Empleados where EmpleadoCodigo='1033796537'");
 
@@ -46,7 +46,7 @@ namespace WpfApp1
                         //MessageBox.Show(item.EmpleadoNombres);
                     }
                     gridA.ItemsSource = query.ToList();
-                        //a.CtMae_Empleados.Local.ToBindingList();
+                    //a.CtMae_Empleados.Local.ToBindingList();
 
                     //MessageBox.Show(o.ToString());
                 }
@@ -54,7 +54,7 @@ namespace WpfApp1
             }
             catch (Exception w)
             {
-                MessageBox.Show("e44o4:"+w);
+                MessageBox.Show("e44o4:" + w);
             }
         }
 
@@ -73,7 +73,7 @@ namespace WpfApp1
             }
             catch (Exception w)
             {
-                MessageBox.Show("error al actualizar:"+w);
+                MessageBox.Show("error al actualizar:" + w);
             }
 
         }
@@ -86,7 +86,7 @@ namespace WpfApp1
             }
             catch (Exception w)
             {
-                MessageBox.Show("error al insertar:"+w);
+                MessageBox.Show("error al insertar:" + w);
             }
         }
 
@@ -94,12 +94,17 @@ namespace WpfApp1
         {
             try
             {
-
+                using (var context = new SDXCatering_Emp010Entities())
+                {
+                    var empleado = (CtMae_Empleados)gridA.SelectedItem;
+                    context.CtMae_Empleados.Remove(empleado);
+                    context.SaveChanges();
+                }
             }
             catch (Exception w)
             {
 
-                MessageBox.Show("error al eliminar:"+w);
+                MessageBox.Show("error al eliminar:" + w);
             }
         }
 
@@ -107,12 +112,33 @@ namespace WpfApp1
         {
             try
             {
-
+                load();
             }
             catch (Exception w)
             {
-                MessageBox.Show("error al realizar el select:"+w);
+                MessageBox.Show("error al realizar el select:" + w);
             }
         }
+
+
+        public void load()
+        {
+            try
+            {
+                using (var a = new SDXCatering_Emp010Entities())
+                {
+                    var query = (from st in a.CtMae_Empleados
+                                 select st).Take(5);
+                    
+                    gridA.ItemsSource = query.ToList();
+                }
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show("error al cargar":+2);
+            }
+        }
+
+
     }
 }
