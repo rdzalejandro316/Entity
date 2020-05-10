@@ -64,11 +64,12 @@ namespace WpfApp1
             {
                 var empleado = (CtMae_Empleados)gridA.SelectedItem;
                 //MessageBox.Show(a.EmpleadoCodigo);
-                empleado.EmpleadoNombres = "cambiado";
+                //empleado.EmpleadoNombres = "cambiado";
                 using (var context = new SDXCatering_Emp010Entities())
                 {
                     context.Entry(empleado).State = System.Data.Entity.EntityState.Modified;
                     context.SaveChanges();
+                    load();
                 }
             }
             catch (Exception w)
@@ -81,7 +82,25 @@ namespace WpfApp1
         private void BtnInsert_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
+            {                
+
+                using (var context = new SDXCatering_Emp010Entities())
+                {
+                    var empleado = new CtMae_Empleados
+                    {
+                        Cedula = "4",
+                        EmpleadoCodigo = "4",
+                        EmpleadoNombres = "otro empleado",
+                        EmpleadoApellidos = "otro empleado",
+                        EmpresaCodigo = "1307",
+                        PuntoVentaCodigo= "03",
+                        CargoId = 1
+                    };
+
+                    context.CtMae_Empleados.Add(empleado);
+                    context.SaveChanges();
+                    load();
+                }                
 
             }
             catch (Exception w)
@@ -97,8 +116,10 @@ namespace WpfApp1
                 using (var context = new SDXCatering_Emp010Entities())
                 {
                     var empleado = (CtMae_Empleados)gridA.SelectedItem;
-                    context.CtMae_Empleados.Remove(empleado);
+                    //context.CtMae_Empleados.Remove(empleado);
+                    context.Entry(empleado).State = System.Data.Entity.EntityState.Deleted;
                     context.SaveChanges();
+                    load();
                 }
             }
             catch (Exception w)
@@ -135,7 +156,7 @@ namespace WpfApp1
             }
             catch (Exception w)
             {
-                MessageBox.Show("error al cargar":+2);
+                MessageBox.Show("error al cargar:"+w);
             }
         }
 

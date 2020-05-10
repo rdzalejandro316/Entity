@@ -12,7 +12,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <DataGrid AutoGenerateColumns="True" Name="gridA">
+        <DataGrid AutoGenerateColumns="True" Name="gridA" >
             
         </DataGrid>
         
